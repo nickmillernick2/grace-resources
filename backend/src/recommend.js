@@ -79,12 +79,13 @@ Return your response as JSON with this structure:
 Pick 3-5 of the most relevant resources. Match based on relevance keywords and category fit.`;
 
   try {
-    console.log('Calling Claude API with model: claude-3-5-sonnet-20241022');
+    const modelName = 'claude-opus-4-1';
+    console.log('Calling Claude API with model:', modelName);
     console.log('Client type:', typeof client);
     console.log('Client has messages:', !!client.messages);
 
     const response = await client.messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: modelName,
       max_tokens: 1024,
       system: systemPrompt,
       messages: [
@@ -94,6 +95,7 @@ Pick 3-5 of the most relevant resources. Match based on relevance keywords and c
         },
       ],
     });
+    
 
     console.log('Received response from Claude');
 
