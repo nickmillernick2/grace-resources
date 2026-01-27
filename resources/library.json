@@ -11,6 +11,17 @@
     "relevance": ["God's character", "intimacy with God", "faith foundation"]
   },
   {
+    "id": "willard-hearing-god",
+    "title": "Hearing God",
+    "author": "Dallas Willard",
+    "type": "book",
+    "category": "listening-to-god",
+    "description": "A deep exploration of how to recognize and respond to God's voice in daily life. Teaches discernment and helps readers develop sensitivity to God's leading.",
+    "difficulty": "intermediate",
+    "duration": "book",
+    "relevance": ["discernment", "God's voice", "guidance"]
+  },
+  {
     "id": "bevere-good-fight",
     "title": "The Good Fight",
     "author": "John Bevere",
@@ -31,6 +42,62 @@
     "difficulty": "beginner",
     "duration": "book",
     "relevance": ["God's goodness", "obedience", "blessings"]
+  },
+  {
+    "id": "tripp-sex-broken-world",
+    "title": "Sex in a Broken World",
+    "author": "Paul David Tripp",
+    "type": "book",
+    "category": "marriage-relationships",
+    "description": "Honest, biblical exploration of sexuality and relationships. Addresses struggles with purity, lust, and building healthy relationships grounded in God's design.",
+    "difficulty": "intermediate",
+    "duration": "book",
+    "relevance": ["purity", "sexuality", "marriage"]
+  },
+  {
+    "id": "foster-celebration-discipline",
+    "title": "Celebration of Discipline",
+    "author": "Richard Foster",
+    "type": "book",
+    "category": "prayer",
+    "related_categories": ["serving-others", "listening-to-god"],
+    "description": "A transformative guide to spiritual disciplines. Covers prayer, meditation, fasting, solitude, service, and more. Foundational for deep spiritual growth.",
+    "difficulty": "intermediate",
+    "duration": "book",
+    "relevance": ["spiritual disciplines", "prayer", "service", "transformation"]
+  },
+  {
+    "id": "maxwell-21-laws-leadership",
+    "title": "The 21 Irrefutable Laws of Leadership",
+    "author": "John Maxwell",
+    "type": "book",
+    "category": "leadership",
+    "description": "Practical, principle-based approach to leadership. Essential reading for anyone leading a team, church group, or organization.",
+    "difficulty": "beginner",
+    "duration": "book",
+    "relevance": ["leadership", "influence", "team building"]
+  },
+  {
+    "id": "maxwell-developing-leader",
+    "title": "Developing the Leader Within You",
+    "author": "John Maxwell",
+    "type": "book",
+    "category": "leadership",
+    "description": "Focuses on personal development and growth as a leader. Practical steps to maximize your leadership potential.",
+    "difficulty": "beginner",
+    "duration": "book",
+    "relevance": ["personal growth", "leadership", "self-development"]
+  },
+  {
+    "id": "maxwell-5-levels-leadership",
+    "title": "The 5 Levels of Leadership",
+    "author": "John Maxwell",
+    "type": "book",
+    "category": "leadership",
+    "description": "Shows the progression of leadership growth from positional authority to genuine influence. Understand where you are and how to develop further.",
+    "difficulty": "intermediate",
+    "duration": "book",
+    "relevance": ["leadership progression", "influence", "development"]
   },
   {
     "id": "psalms-scripture",
@@ -66,5 +133,125 @@
     "difficulty": "beginner",
     "duration": "2 min read",
     "relevance": ["prayer model", "foundational"]
+  },
+  {
+    "id": "matthew-16-24-25",
+    "title": "Take Up Your Cross",
+    "author": "Jesus",
+    "type": "scripture",
+    "category": "serving-others",
+    "description": "Matthew 16:24-25 — Jesus teaches that true life comes through self-denial and putting His kingdom above yourself.",
+    "reference": "Matthew 16:24-25",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["selflessness", "sacrifice", "following Jesus"]
+  },
+  {
+    "id": "philippians-2-3-4",
+    "title": "Consider Others Better Than Yourselves",
+    "author": "Paul",
+    "type": "scripture",
+    "category": "serving-others",
+    "description": "Philippians 2:3-4 — Paul's exhortation to humility and considering others' interests above your own.",
+    "reference": "Philippians 2:3-4",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["humility", "selflessness", "love"]
+  },
+  {
+    "id": "galatians-5-13",
+    "title": "Serve One Another in Love",
+    "author": "Paul",
+    "type": "scripture",
+    "category": "serving-others",
+    "description": "Galatians 5:13 — Freedom in Christ is meant for serving others, not for selfish desires.",
+    "reference": "Galatians 5:13",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["service", "freedom", "love"]
+  },
+  {
+    "id": "philippians-4-8",
+    "title": "Think on These Things",
+    "author": "Paul",
+    "type": "scripture",
+    "category": "addiction",
+    "description": "Philippians 4:8 — Paul teaches that controlling your thoughts is key to spiritual freedom. Whatever is true, noble, right, pure, lovely, and admirable—meditate on these.",
+    "reference": "Philippians 4:8",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["mental health", "freedom", "meditation"]
+  },
+  {
+    "id": "1corinthians-6-19",
+    "title": "Your Body Is a Temple",
+    "author": "Paul",
+    "type": "scripture",
+    "category": "addiction",
+    "description": "1 Corinthians 6:19 — Understanding the sanctity of your body and how honoring God means taking care of it.",
+    "reference": "1 Corinthians 6:19",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["purity", "body image", "holiness"]
+  },
+  {
+    "id": "proverbs-23-7",
+    "title": "As a Man Thinks in His Heart",
+    "author": "Solomon",
+    "type": "scripture",
+    "category": "addiction",
+    "description": "Proverbs 23:7 — Our thoughts shape who we are. Renewing your mind is essential to overcoming destructive habits.",
+    "reference": "Proverbs 23:7",
+    "difficulty": "beginner",
+    "duration": "1 min read",
+    "relevance": ["thoughts", "habits", "transformation"]
+  },
+  {
+    "id": "romans-6-11-14",
+    "title": "Dead to Sin, Alive in Christ",
+    "author": "Paul",
+    "type": "scripture",
+    "category": "addiction",
+    "description": "Romans 6:11-14 — The foundational truth that through Christ, you have power over sin and addiction. You're not enslaved anymore.",
+    "reference": "Romans 6:11-14",
+    "difficulty": "intermediate",
+    "duration": "3 min read",
+    "relevance": ["freedom", "power over sin", "identity in Christ"]
+  },
+  {
+    "id": "1peter-1-13-16",
+    "title": "Set Your Hope Fully on God",
+    "author": "Peter",
+    "type": "scripture",
+    "category": "addiction",
+    "description": "1 Peter 1:13-16 — Peter teaches that holiness comes from placing complete trust in God, not in worldly desires.",
+    "reference": "1 Peter 1:13-16",
+    "difficulty": "beginner",
+    "duration": "2 min read",
+    "relevance": ["holiness", "trust in God", "renewal"]
+  },
+  {
+    "id": "psalm-42",
+    "title": "As the Deer Pants for Water",
+    "author": "David",
+    "type": "scripture",
+    "category": "faith-questions",
+    "description": "Psalm 42 — An honest expression of doubt and longing for God. Addresses spiritual thirst and wrestling with faith.",
+    "reference": "Psalm 42",
+    "difficulty": "beginner",
+    "duration": "5 min read",
+    "relevance": ["doubt", "faith struggle", "longing for God"]
+  },
+  {
+    "id": "hebrews-11-1-6",
+    "title": "What is Faith?",
+    "author": "Unknown (likely Paul)",
+    "type": "scripture",
+    "category": "faith-questions",
+    "description": "Hebrews 11:1-6 — A definition and exploration of faith. Foundational for understanding what it means to trust God.",
+    "reference": "Hebrews 11:1-6",
+    "difficulty": "intermediate",
+    "duration": "3 min read",
+    "relevance": ["faith definition", "trust", "belief"]
   }
 ]
