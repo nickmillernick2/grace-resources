@@ -79,7 +79,7 @@ Return your response as JSON with this structure:
 Pick 3-5 of the most relevant resources. Match based on relevance keywords and category fit.`;
 
   try {
-    const modelName = 'claude-3-sonnet-20240229';
+    const modelName = 'claude-3-haiku-20240307';
     console.log('Calling Claude API with model:', modelName);
     console.log('Client type:', typeof client);
     console.log('Client has messages:', !!client.messages);
