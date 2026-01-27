@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './ResourceCard.css';
+import useFavorites from '../hooks/useFavorites';
 
 function ResourceCard({ resource }) {
   const [coverLoaded, setCoverLoaded] = useState(false);
   const [coverError, setCoverError] = useState(false);
+  const { toggleFavorite, isFavorited } = useFavorites();
+  const [isSaved, setIsSaved] = useState(false);
 
   const getTypeIcon = (type) => {
     switch (type) {
@@ -24,6 +27,11 @@ function ResourceCard({ resource }) {
 
   const handleCoverError = () => {
     setCoverError(true);
+  };
+
+  const handleFavoriteClick = () => {
+    toggleFavorite(resource.id);
+    setIsSaved(!isSaved);
   };
 
   return (
@@ -49,6 +57,13 @@ function ResourceCard({ resource }) {
             <p className="author">{resource.author}</p>
           </div>
         </div>
+        <button 
+          className={`favorite-btn ${isSaved ? 'saved' : ''}`}
+          onClick={handleFavoriteClick}
+          title={isSaved ? 'Remove from favorites' : 'Add to favorites'}
+        >
+          {isSaved ? '❤️' : '🤍'}
+        </button>
       </div>
 
       <div className="card-body">
