@@ -56,8 +56,9 @@ app.post('/api/recommend', async (req, res) => {
 app.get('/api/resources', (req, res) => {
   try {
     const category = req.query.category;
-
-    let resources = require('../resources/library.json');
+    const path = require('path');
+    const libraryPath = path.join(__dirname, '../../resources/library.json');
+    let resources = JSON.parse(require('fs').readFileSync(libraryPath, 'utf8'));
 
     if (category) {
       resources = resources.filter((r) => r.category === category);
@@ -80,7 +81,10 @@ app.get('/api/resources', (req, res) => {
 // Get resource categories
 app.get('/api/categories', (req, res) => {
   try {
-    const resources = require('../resources/library.json');
+    const path = require('path');
+    const fs = require('fs');
+    const libraryPath = path.join(__dirname, '../../resources/library.json');
+    const resources = JSON.parse(fs.readFileSync(libraryPath, 'utf8'));
     const categories = [...new Set(resources.map((r) => r.category))].sort();
 
     res.json({

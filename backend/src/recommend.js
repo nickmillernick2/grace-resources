@@ -11,12 +11,14 @@ let resourceLibrary = [];
 
 function loadResourceLibrary() {
   try {
-    const libraryPath = path.join(__dirname, '../resources/library.json');
+    // Path from backend/src/ to ../../resources/library.json
+    const libraryPath = path.join(__dirname, '../../resources/library.json');
     const data = fs.readFileSync(libraryPath, 'utf8');
     resourceLibrary = JSON.parse(data);
     console.log(`Loaded ${resourceLibrary.length} resources from library`);
   } catch (error) {
     console.error('Failed to load resource library:', error.message);
+    console.error('Looked for library at:', path.join(__dirname, '../../resources/library.json'));
     resourceLibrary = [];
   }
 }
