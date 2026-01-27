@@ -78,6 +78,10 @@ Return your response as JSON with this structure:
 Pick 3-5 of the most relevant resources. Match based on relevance keywords and category fit.`;
 
   try {
+    console.log('Calling Claude API with model: claude-3-5-sonnet-20241022');
+    console.log('Client type:', typeof client);
+    console.log('Client has messages:', !!client.messages);
+
     const response = await client.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       max_tokens: 1024,
@@ -89,6 +93,8 @@ Pick 3-5 of the most relevant resources. Match based on relevance keywords and c
         },
       ],
     });
+
+    console.log('Received response from Claude');
 
     const content = response.content[0];
     if (content.type !== 'text') {
@@ -112,6 +118,7 @@ Pick 3-5 of the most relevant resources. Match based on relevance keywords and c
     return recommendation;
   } catch (error) {
     console.error('Error getting recommendations from Claude:', error.message);
+    console.error('Full error:', error);
     throw error;
   }
 }
