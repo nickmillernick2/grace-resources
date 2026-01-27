@@ -1,10 +1,18 @@
-const Anthropic = require('@anthropic-ai/sdk');
+const Anthropic = require('@anthropic-ai/sdk').default;
 const fs = require('fs');
 const path = require('path');
 
-const client = new Anthropic({
-  apiKey: process.env.CLAUDE_API_KEY,
-});
+// Initialize client
+let client;
+try {
+  client = new Anthropic({
+    apiKey: process.env.CLAUDE_API_KEY,
+  });
+  console.log('Anthropic client initialized successfully');
+} catch (error) {
+  console.error('Failed to initialize Anthropic client:', error.message);
+  console.error('API Key present:', !!process.env.CLAUDE_API_KEY);
+}
 
 // Load resource library
 let resourceLibrary = [];
@@ -40,6 +48,10 @@ function formatResourcesForContext() {
 
 // Get recommendations from Claude
 async function getRecommendations(userQuestion) {
+  if (!client) {
+    throw new Error('Anthropic client not initialized. Check your CLAUDE_API_KEY.');
+  }
+
   const resourcesContext = formatResourcesForContext();
 
   const systemPrompt = `You are a helpful assistant that recommends spiritual and faith resources.
