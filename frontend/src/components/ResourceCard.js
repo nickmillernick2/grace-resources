@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ResourceCard.css';
 
 function ResourceCard({ resource }) {
+  const [coverLoaded, setCoverLoaded] = useState(false);
+  const [coverError, setCoverError] = useState(false);
+
   const getTypeIcon = (type) => {
     switch (type) {
       case 'book':
@@ -15,8 +18,29 @@ function ResourceCard({ resource }) {
     }
   };
 
+  const handleCoverLoad = () => {
+    setCoverLoaded(true);
+  };
+
+  const handleCoverError = () => {
+    setCoverError(true);
+  };
+
   return (
     <div className="resource-card">
+      {/* Book Cover Image */}
+      {resource.type === 'book' && resource.coverUrl && !coverError && (
+        <div className="card-image">
+          <img
+            src={resource.coverUrl}
+            alt={`${resource.title} cover`}
+            onLoad={handleCoverLoad}
+            onError={handleCoverError}
+            className={coverLoaded ? 'loaded' : 'loading'}
+          />
+        </div>
+      )}
+
       <div className="card-header">
         <div className="title-section">
           <span className="type-icon">{getTypeIcon(resource.type)}</span>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourceCard from './ResourceCard';
+import ScriptureCard from './ScriptureCard';
 import './RecommendationResults.css';
 
 function RecommendationResults({ results }) {
@@ -10,8 +11,21 @@ function RecommendationResults({ results }) {
         <p>{results.understanding}</p>
       </div>
 
+      {/* Scripture Section - Displayed First */}
+      {results.scripture && results.scripture.length > 0 && (
+        <div className="scripture-section">
+          <h2>📖 Scripture</h2>
+          <div className="scripture-verses">
+            {results.scripture.map((verse, index) => (
+              <ScriptureCard key={index} verse={verse} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Resources Section */}
       <div className="recommendations">
-        <h2>Recommended Resources</h2>
+        <h2>📚 Resources</h2>
         <div className="resources-grid">
           {results.recommendations.map((resource) => (
             <ResourceCard key={resource.id} resource={resource} />
@@ -21,7 +35,7 @@ function RecommendationResults({ results }) {
 
       {results.summary && (
         <div className="summary">
-          <h3>A word of encouragement</h3>
+          <h3>💖 A word of encouragement</h3>
           <p>{results.summary}</p>
         </div>
       )}
