@@ -1,4 +1,4 @@
-const Anthropic = require('@anthropic-ai/sdk').default;
+const { Anthropic } = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
 
@@ -9,6 +9,7 @@ try {
     apiKey: process.env.CLAUDE_API_KEY,
   });
   console.log('Anthropic client initialized successfully');
+  console.log('Client keys:', Object.keys(client).slice(0, 10));
 } catch (error) {
   console.error('Failed to initialize Anthropic client:', error.message);
   console.error('API Key present:', !!process.env.CLAUDE_API_KEY);
