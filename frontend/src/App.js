@@ -1,60 +1,67 @@
 import React, { useState } from 'react';
 import './App.css';
+import RecommendationForm from './components/RecommendationForm';
+import RecommendationResults from './components/RecommendationResults';
 
 function App() {
-  const [question, setQuestion] = useState('');
-  const [resources, setResources] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [results, setResults] = useState(null);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (question) => {
     setLoading(true);
+    setError(null);
+    setResults(null);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/recommend`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question })
-      });
-      
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/recommend`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+      }
+
       const data = await response.json();
-      setResources(data.resources || []);
-    } catch (error) {
-      console.error('Error:', error);
+      if (data.success) {
+        setResults(data.data);
+      } else {
+        setError(data.error || 'Failed to get recommendations');
+      }
+    } catch (err) {
+      setError(err.message || 'Something went wrong');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="App">
-      <h1>Grace Resources</h1>
-      <p>Find resources to help your faith journey</p>
+    <div className="app">
+      <header className="app-header">
+        <h1>Grace Resources</h1>
+        <p>Discover resources to support your faith journey</p>
+      </header>
 
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-          placeholder="What are you looking for? (e.g., 'I'm struggling with doubt')"
-          rows="4"
-        />
-        <button type="submit" disabled={loading}>
-          {loading ? 'Finding resources...' : 'Get Recommendations'}
-        </button>
-      </form>
+      <main className="app-main">
+        <RecommendationForm onSubmit={handleSubmit} loading={loading} />
 
-      {resources.length > 0 && (
-        <div className="resources">
-          <h2>Recommended Resources</h2>
-          {resources.map((resource, idx) => (
-            <div key={idx} className="resource-card">
-              <h3>{resource.title}</h3>
-              <p><strong>{resource.author}</strong></p>
-              <p>{resource.description}</p>
-            </div>
-          ))}
-        </div>
-      )}
+        {error && <div className="error-message">{error}</div>}
+
+        {loading && <div className="loading">Finding resources for you...</div>}
+
+        {results && <RecommendationResults results={results} />}
+      </main>
+
+      <footer className="app-footer">
+        <p>
+          Grace Resources — Resources to help your faith grow deeper
+        </p>
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,71 @@
+.results-container {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.understanding {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.understanding h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.understanding p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.recommendations {
+  margin-bottom: 2rem;
+}
+
+.recommendations h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary {
+  background: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.summary h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.summary p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
