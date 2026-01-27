@@ -24,27 +24,74 @@ body {
 .app-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-content {
+  flex: 1;
   text-align: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .app-header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 700;
+  margin: 0;
 }
 
 .app-header p {
-  font-size: 1.1rem;
-  opacity: 0.95;
-  max-width: 500px;
-  margin: 0 auto;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.app-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.badge {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+  font-weight: 700;
 }
 
 .app-main {
   flex: 1;
   padding: 2rem;
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -80,12 +127,29 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
   .app-header h1 {
     font-size: 1.8rem;
   }
 
   .app-header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .app-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 
   .app-main {
