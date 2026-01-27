@@ -1,0 +1,70 @@
+[
+  {
+    "id": "packer-knowing-god",
+    "title": "Knowing God",
+    "author": "J.I. Packer",
+    "type": "book",
+    "category": "getting-to-know-god",
+    "description": "A classic exploration of God's character and attributes. Helps readers understand who God truly is, how He relates to His people, and how to grow in intimacy with Him.",
+    "difficulty": "intermediate",
+    "duration": "book (300+ pages)",
+    "relevance": ["God's character", "intimacy with God", "faith foundation"]
+  },
+  {
+    "id": "bevere-good-fight",
+    "title": "The Good Fight",
+    "author": "John Bevere",
+    "type": "book",
+    "category": "faith-questions",
+    "description": "Understanding spiritual warfare, God's purpose, and living out your faith with confidence despite opposition.",
+    "difficulty": "intermediate",
+    "duration": "book",
+    "relevance": ["spiritual growth", "faith", "purpose"]
+  },
+  {
+    "id": "bevere-blessings-overtake-you",
+    "title": "Blessings Overtake You",
+    "author": "John Bevere",
+    "type": "book",
+    "category": "getting-to-know-god",
+    "description": "Explores God's heart toward His people and how blessings flow from obedience and right relationship with God.",
+    "difficulty": "beginner",
+    "duration": "book",
+    "relevance": ["God's goodness", "obedience", "blessings"]
+  },
+  {
+    "id": "psalms-scripture",
+    "title": "The Psalms",
+    "author": "David & Others",
+    "type": "scripture",
+    "category": "prayer",
+    "description": "Raw, honest prayers expressing every human emotion—praise, lament, anger, hope. The Psalms model how to pray authentically.",
+    "difficulty": "beginner",
+    "duration": "ongoing reading",
+    "relevance": ["prayer models", "honesty with God", "worship"]
+  },
+  {
+    "id": "jesus-teachings-prayer",
+    "title": "Jesus's Teachings on Prayer (Compiled)",
+    "author": "Jesus (Gospel accounts)",
+    "type": "scripture",
+    "category": "prayer",
+    "description": "A collection of Jesus's direct teachings and parables about prayer, including the Lord's Prayer, teachings on faith, persistence, forgiveness, and praying in His name.",
+    "reference": "See resources/jesus-teachings-on-prayer.md for full scripture references",
+    "difficulty": "beginner",
+    "duration": "reference guide",
+    "relevance": ["prayer foundation", "Jesus's model", "faith in prayer"]
+  },
+  {
+    "id": "matthew-6-9-13",
+    "title": "The Lord's Prayer",
+    "author": "Jesus",
+    "type": "scripture",
+    "category": "prayer",
+    "description": "Matthew 6:9-13 — The prayer Jesus taught His disciples. A model for all Christian prayer.",
+    "reference": "Matthew 6:9-13",
+    "difficulty": "beginner",
+    "duration": "2 min read",
+    "relevance": ["prayer model", "foundational"]
+  }
+]
