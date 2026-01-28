@@ -9,7 +9,7 @@ function FavoritesPage() {
   const { favorites } = useFavorites();
 
   useEffect(() => {
-    fetch('/resources/library.json')
+    fetch(process.env.PUBLIC_URL + '/resources/library.json')
       .then((res) => res.json())
       .then((data) => {
         setResources(data);

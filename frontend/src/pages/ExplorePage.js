@@ -10,7 +10,7 @@ function ExplorePage() {
 
   useEffect(() => {
     // Load resource library
-    fetch('/resources/library.json')
+    fetch(process.env.PUBLIC_URL + '/resources/library.json')
       .then((res) => res.json())
       .then((data) => {
         setResources(data);
