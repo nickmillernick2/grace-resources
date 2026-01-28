@@ -6,7 +6,6 @@ function ResourceCard({ resource }) {
   const [coverLoaded, setCoverLoaded] = useState(false);
   const [coverError, setCoverError] = useState(false);
   const { toggleFavorite, isFavorited } = useFavorites();
-  const [isSaved, setIsSaved] = useState(false);
 
   const getTypeIcon = (type) => {
     switch (type) {
@@ -31,8 +30,9 @@ function ResourceCard({ resource }) {
 
   const handleFavoriteClick = () => {
     toggleFavorite(resource.id);
-    setIsSaved(!isSaved);
   };
+
+  const isSaved = isFavorited(resource.id);
 
   return (
     <div className="resource-card">
